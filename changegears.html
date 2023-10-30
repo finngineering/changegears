@@ -1,0 +1,145 @@
+<!--
+    Main page for gear train calculator
+
+    2013 Finngineering
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="stylesheet.css">
+    <title>
+        Generic change gear calculator
+    </title>
+    </head>
+    <body>
+        <h1>Generic change gear calculator</h1>
+        <script type="text/javascript" src="geartrain.js"></script>
+        <script type="text/javascript" src="frontend.js"></script>
+        <p><a href="changegears-instructions.html">Read the instructions</a></p>
+        <div class="form">
+            <form id="changegears">
+                <div class="form-section">
+                    Required input
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="leadscrew-lead">Leadscrew lead:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="leadscrew-lead" value="1.5" />
+                        <input type="radio" id="leadscrew-mm" name="leadscrew-unit" checked /><label for="leadscrew-mm">mm</label>
+                        <input type="radio" id="leadscrew-tpi" name="leadscrew-unit" /><label for="leadscrew-tpi">tpi</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="shaft-count" title="This is the total number of shafts in the gearbox, including the input/spindle and output/leadscrew shafts.">Shaft count:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="shaft-count" value="4" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="change-gear-set">Change gear set:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <textarea rows="3" id="change-gear-set">20,25,30,35,40,50,55,60,65,70,75,80,80,80</textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="input-gear-set">Input gear (set):</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="checkbox" id="input-set-shared" />
+                        <label for="input-set-shared">same as change gears</label>
+                        <textarea rows="3" id="input-gear-set">40</textarea><br />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="desired-lead">Desired lead:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="desired-lead" value="1.0" />
+                        <input type="radio" id="desired-mm" name="desired-unit" checked /><label for="desired-mm">mm</label>
+                        <input type="radio" id="desired-tpi" name="desired-unit" /><label for="desired-tpi">tpi</label>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    Optional input
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="module" title="">Gear module (or DP):</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="gear-module" value="1.0" />
+                        <input type="radio" id="module-mod" name="module-unit" checked /><label for="module-mod">mod</label>
+                        <input type="radio" id="module-dp" name="module-unit" /><label for="module-dp">DP (")</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="input-adjacent-size" title="">Input gear adjacent size:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="input-adjacent-size" value="50" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="spacer-size" title="">Empty gear (spacer) size:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="spacer-size" value="20" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="min-shaft-distance" title="">Minimum shaft distance:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="min-shaft-distance" value="167" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <label for="max-shaft-distance" title="">Maximum shaft distance:</label>
+                    </div>
+                    <div class="form-col-input">
+                        <input type="text" size="5" id="max-shaft-distance" value="220" />
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-col-label">
+                        <a href="#" id="calculation-link">Link to this calculation</a><br />
+                    </div>
+                    <div class="form-col-input">
+                        <button type="button" id="calculate-button">Calculate</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+        <p id="calculation-status">Calculation status: Not started</p>
+        <div class="form-section">
+            Results
+        </div>
+        <table id="results-table">
+            <thead id="results-table-head">
+
+            </thead>
+            <tbody id="results-table-body">
+
+            </tbody>
+        </table>
+    </body>
+</html>

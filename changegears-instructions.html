@@ -1,0 +1,44 @@
+<!--
+    Help page for gear train calculator
+
+    The main page is available at www.finngineering.com/changegears.html and the source
+    code at github.com/finngineering/changegears
+
+    2013 Finngineering
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="stylesheet.css">
+    <title>
+        Generic change gear calculator - instructions
+    </title>
+    </head>
+    <body>
+        <h1>Generic change gear calculator - Instructions</h1>
+        <div class="content">
+            <!-- <div class="content-right"> -->
+                <img src="illustration.png" width="300px" style="float: right" />
+            <!-- </div> -->
+            <b>General</b>
+            <p>
+                This main purpose of this calculator is to determine how to setup lathe change gears for a threading operation. The calculator assumes there is a mechanism by which the distance between the first and last shaft to be varied (banjo/quadrant). In addition, the calculator can be used for almost any type of gear train applications. For instance for gear hobbing or automotive gearbox design (but this may require abusing the input fields). The illustration shown here provides an example of how a lathe might be setup.
+            </p>
+            <b>Required input</b>
+            <p>
+                <b>Leadscrew lead</b> specifies how far the lathe carriage moves with one revolution of the leadscrew (shaft 4 in the illustration). The unit can be either in <b>mm</b> per revolution or <b>TPI</b>, meaning how many turns of the leadscrew per inch of travel.<br /><b>Shaft count</b> is the number of shafts used in the gear train, where the first is normally the spindle and the last the leadscrew (the illustration has 4 shafts)<br /><b>Change gear set</b> is a comma-separated list of available change gears. If multiples of the same gear size exists, both should be included in the list.<br /><b>Input gear set</b> is a comma-separated list of gears that can be used on the first (often spindle) shaft. This is separate, because often that gear cannot be changed. In the case that there is no difference between the first gear/shaft and the rest, the <b>same as change gears</b> should be checked.<br />
+                <b>Desired lead</b> is the target of the calculation and can be in either <b>mm</b> per first shaft (spindle) revolution or as <b>TPI</b>, i.e. turns of the first shaft (spindle) per inch of travel.
+            </p>
+            <b>Optional input</b>
+            <p>
+                <b>Gear module</b> specifies the <b>mod</b>ule (or diametral pitch <b>DP</b>) of the gears. The gear module is required to apply some of the contstraints, e.g. distance between shafts.<br />
+                <b>Input gear adjacent size</b> specifies the size of e.g. a pulley (as in the illustration) beside the input gear (shaft 1), which limits the size the gear(s) on the following shaft can have<br />
+                <b>Spacer size</b> is the size of the bushing in case the is only one gear on a shaft.<br />
+                <b>Minimum shaft distance</b> and <b>Maximum shaft distance </b>specifies the minimum and maximum accepted distance between the first and last shaft, respectively. This is requried to ensure the used gears are sufficiently large to reach all the way from the first to the last shaft, but not so large that they don't fit on the banjo/quadrant<br />
+            </p>
+        </div>
+    </body>
+</html>

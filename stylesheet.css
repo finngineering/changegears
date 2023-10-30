@@ -1,0 +1,123 @@
+/**
+ * Stylesheet for change gears calculator
+ * 
+ * The main page is available at www.finngineering.com/changegears.html and the source
+ * code at github.com/finngineering/changegears
+ *
+ * 2013 Finngineering
+ */
+
+body {
+	font-family: 'Tahoma', sans-serif;
+}
+
+input[type="text"] {
+	margin: 0px auto;
+}
+
+.content {
+	max-width: 700px;
+}
+/*
+.content-left {
+
+}
+*/
+.content-right {
+	float: left;
+}
+
+.form {
+		display: table;
+		width: 100%;
+		max-width: 500px;
+}
+
+.form-section {
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.form-row {
+	border-top: 1px dotted black;
+	width: 100%;
+	clear: both;
+}
+
+.form-col-label {
+	clear: both;
+	float: left;
+	margin-left: auto;
+	margin-right: 0px;
+	width: 200px;
+	padding: 5px;
+}
+
+.form-col-input {
+	margin-left: 210px;
+	padding: 5px;
+}
+
+textarea {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.unit {
+	font-weight: normal;
+}
+
+#results-table {
+	width: 500px;
+}
+
+.calculation-status {
+	max-width: 500px;
+}
+
+
+@media screen and (max-width: 500px) {
+	.form-col-label, .form-col-input {
+		width: 100%;
+		margin-left: 0px;
+		margin-top: 0px;
+		padding-top: 0px;
+		clear: both;
+	}
+	.form-col-label label {
+		float: none;
+	}
+	#results-table {
+		width: 100%;
+	}
+}
+
+table, td, th {
+	border: 1px solid black;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	vertical-align: center;
+}
+
+td.geartrain {
+	width: 0%;
+	padding-left: 3px;
+	padding-right: 3px;
+	border-left: 0px;
+	border-right: 0px;
+	font-family: monospace;
+}
+
+th.geartrain {
+	border-left: 0px;
+	border-right: 0px;
+}
