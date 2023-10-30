@@ -15,22 +15,15 @@ input[type="text"] {
 	margin: 0px auto;
 }
 
-.content {
-	max-width: 700px;
-}
-/*
-.content-left {
-
-}
-*/
-.content-right {
-	float: left;
-}
-
 .form {
 		display: table;
 		width: 100%;
 		max-width: 500px;
+}
+
+.helpcontent {
+	width: 100%;
+	max-width: 700px;
 }
 
 .form-section {
